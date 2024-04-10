@@ -1,0 +1,35 @@
+Collection Name: topics
+=======================
+
+[
+  {
+    _id: ObjectId('661570d25ebb0652f216ca0c'),
+    id: 1,
+    name: 'Functions',
+    date: ISODate('2024-10-02T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('661570d25ebb0652f216ca0d'),
+    id: 2,
+    name: 'Bootstrap',
+    date: ISODate('2024-10-15T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('661570d25ebb0652f216ca0e'),
+    id: 3,
+    name: 'ES5 vs ES6 in JAvascript',
+    date: ISODate('2024-10-17T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('661570d25ebb0652f216ca0f'),
+    id: 4,
+    name: 'ReactJS',
+    date: ISODate('2024-10-20T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('661570d25ebb0652f216ca10'),
+    id: 5,
+    name: 'MongoDB',
+    date: ISODate('2024-10-25T00:00:00.000Z')
+  }
+]
