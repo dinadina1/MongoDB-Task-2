@@ -1,0 +1,88 @@
+1. Find all the topics and tasks which are thought in the month of October
+
+Query: 
+======
+db.topics.aggregate( [ { $lookup: { from: 'tasks', localField: 'id', foreignField: 'topic_id', as: 'tasks' } }, 
+{ $match: { tasks: { $elemMatch: { date: { $gte: ISODate( '2024-10-01T00:00:00.000Z' ),
+$lte: ISODate( '2024-10-31T00:00:00.000Z' ) } } } } }],
+{ maxTimeMS: 60000, allowDiskUse: true } );
+
+Result: 
+======
+[
+  {
+    _id: ObjectId('661570d25ebb0652f216ca0c'),
+    id: 1,
+    name: 'Functions',
+    date: ISODate('2024-10-02T00:00:00.000Z'),
+    tasks: [
+      {
+        _id: ObjectId('6615708a5ebb0652f216ca07'),
+        id: 1,
+        topic_id: 1,
+        name: 'Write a function to find the sum of two numbers',
+        date: ISODate('2024-10-02T00:00:00.000Z')
+      }
+    ]
+  },
+  {
+    _id: ObjectId('661570d25ebb0652f216ca0d'),
+    id: 2,
+    name: 'Bootstrap',
+    date: ISODate('2024-10-15T00:00:00.000Z'),
+    tasks: [
+      {
+        _id: ObjectId('6615708a5ebb0652f216ca08'),
+        id: 2,
+        topic_id: 2,
+        name: 'Cart Bootstrap Design',
+        date: ISODate('2024-10-15T00:00:00.000Z')
+      }
+    ]
+  },
+  {
+    _id: ObjectId('661570d25ebb0652f216ca0e'),
+    id: 3,
+    name: 'ES5 vs ES6 in JAvascript',
+    date: ISODate('2024-10-17T00:00:00.000Z'),
+    tasks: [
+      {
+        _id: ObjectId('6615708a5ebb0652f216ca09'),
+        id: 3,
+        topic_id: 3,
+        name: 'Write a arrow function to print rest countries.',
+        date: ISODate('2024-10-17T00:00:00.000Z')
+      }
+    ]
+  },
+  {
+    _id: ObjectId('661570d25ebb0652f216ca0f'),
+    id: 4,
+    name: 'ReactJS',
+    date: ISODate('2024-10-20T00:00:00.000Z'),
+    tasks: [
+      {
+        _id: ObjectId('6615708a5ebb0652f216ca0a'),
+        id: 4,
+        topic_id: 4,
+        name: 'Create a React App',
+        date: ISODate('2024-10-20T00:00:00.000Z')
+      }
+    ]
+  },
+  {
+    _id: ObjectId('661570d25ebb0652f216ca10'),
+    id: 5,
+    name: 'MongoDB',
+    date: ISODate('2024-10-25T00:00:00.000Z'),
+    tasks: [
+      {
+        _id: ObjectId('6615708a5ebb0652f216ca0b'),
+        id: 5,
+        topic_id: 5,
+        name: 'Create a MongoDB Database',
+        date: ISODate('2024-10-25T00:00:00.000Z')
+      }
+    ]
+  }
+]
