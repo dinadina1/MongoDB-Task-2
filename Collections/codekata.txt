@@ -1,3 +1,6 @@
+Collection Name: codekata
+=========================
+
 [
   {
     _id: ObjectId('6615613b5ebb0652f216c9e0'),
