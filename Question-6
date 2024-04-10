@@ -1,0 +1,52 @@
+6. Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+Query:
+======
+db.users.aggregate( 
+[ 
+{ 
+  $lookup: { 
+    from: 'attendance', 
+    localField: 'id', 
+    foreignField: 'user_id', 
+    as: 'attendance_info' 
+} 
+}, 
+{ 
+  $lookup: { 
+    from: 'tasks', 
+    let: { user_id: '$_id' }, 
+    pipeline: [ 
+      { $match: { $expr: { $and: [ { $eq: ['$user_id', '$user_id'] }, 
+      { $gte: [ '$date', ISODate( '2024-10-15T00:00:00.000Z' )] }, 
+      { $lte: [ '$date', ISODate( '2024-10-31T00:00:00.000Z' )] }] } } }
+    ],
+    as: 'tasks_info' 
+} }, 
+{ 
+    $match: { 
+      attendance_info: { 
+      $elemMatch: { 
+      date: { 
+        $gte: ISODate( '2024-10-15T00:00:00.000Z' ), 
+        $lte: ISODate( '2024-10-31T00:00:00.000Z' ) 
+    }, 
+  status: 'Absent' 
+  } } 
+  } }, 
+  { 
+      $count: 'No of users are Absent and not submitted task from 15-10-24 to 31-10-24' 
+  }
+],
+{ maxTimeMS: 60000, allowDiskUse: true } 
+);
+
+
+Result:
+=======
+
+[
+  {
+    'No of users are Absent and not submitted task from 15-10-24 to 31-10-24': 3
+  }
+]
