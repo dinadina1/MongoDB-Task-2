@@ -1,0 +1,115 @@
+4. Find the number of problems solved by the user in codekata
+
+Query:
+======
+db.codekata.aggregate( 
+[ 
+  { $group: { 
+    _id: '$user_id', 
+    problems_solved: { $sum: 1 } 
+  } }, 
+{ $lookup: { 
+    from: 'users',
+    localField: '_id', 
+    foreignField: 'id', 
+    as: 'student_info' 
+} }
+], 
+{ maxTimeMS: 60000, allowDiskUse: true } );
+
+
+Result:
+=======
+[
+  {
+    _id: 4,
+    problems_solved: 2,
+    student_info: [
+      {
+        _id: ObjectId('6615605f5ebb0652f216c9dc'),
+        id: 4,
+        name: 'Vignesh',
+        email: 'vignesh@gmail.com',
+        role: 'student'
+      }
+    ]
+  },
+  {
+    _id: 5,
+    problems_solved: 1,
+    student_info: [
+      {
+        _id: ObjectId('6615605f5ebb0652f216c9dd'),
+        id: 5,
+        name: 'Ramesh',
+        email: 'ramesh@gmail.com',
+        role: 'student'
+      }
+    ]
+  },
+  {
+    _id: 6,
+    problems_solved: 1,
+    student_info: [
+      {
+        _id: ObjectId('6615605f5ebb0652f216c9de'),
+        id: 6,
+        name: 'Suresh',
+        email: 'suresh@gmail.com',
+        role: 'student'
+      }
+    ]
+  },
+  {
+    _id: 2,
+    problems_solved: 1,
+    student_info: [
+      {
+        _id: ObjectId('6615605f5ebb0652f216c9da'),
+        id: 2,
+        name: 'Dinesh',
+        email: 'dinesh@gmail.com',
+        role: 'student'
+      }
+    ]
+  },
+  {
+    _id: 7,
+    problems_solved: 1,
+    student_info: [
+      {
+        _id: ObjectId('6615605f5ebb0652f216c9df'),
+        id: 7,
+        name: 'Chandru',
+        email: 'chandru@gmail.com',
+        role: 'student'
+      }
+    ]
+  },
+  {
+    _id: 1,
+    problems_solved: 1,
+    student_info: [
+      {
+        _id: ObjectId('6615605f5ebb0652f216c9d9'),
+        id: 1,
+        name: 'Dinakaran',
+        email: 'dinakaran@gmail.com',
+        role: 'student'
+      }
+    ]
+  },
+  {
+    _id: 3,
+    problems_solved: 1,
+    student_info: [
+      {
+        _id: ObjectId('6615605f5ebb0652f216c9db'),
+        id: 3,
+        name: 'Santhosh',
+        email: 'santhosh@gmail.com',
+        role: 'student'
+      }
+    ]
+  }
+]
