@@ -1,0 +1,101 @@
+3. Find all the company drives and students who are appeared for the placement.
+
+Query:
+======
+db.company_drives.aggregate( 
+[ 
+  { 
+    $lookup: { 
+    from: 'users', 
+    localField: 'student_placed', 
+    foreignField: 'name', 
+    as: 'student_info' 
+    } 
+  }
+], 
+{ maxTimeMS: 60000, allowDiskUse: true } );
+
+Result:
+======
+[
+  {
+    _id: ObjectId('661568e35ebb0652f216c9fd'),
+    id: 1,
+    date: ISODate('2024-10-02T00:00:00.000Z'),
+    company_name: 'TCS',
+    student_placed: 'Ramesh',
+    student_info: [
+      {
+        _id: ObjectId('6615605f5ebb0652f216c9dd'),
+        id: 5,
+        name: 'Ramesh',
+        email: 'ramesh@gmail.com',
+        role: 'student'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('661568e35ebb0652f216c9fe'),
+    id: 2,
+    date: ISODate('2024-10-15T00:00:00.000Z'),
+    company_name: 'Wipro',
+    student_placed: 'Suresh',
+    student_info: [
+      {
+        _id: ObjectId('6615605f5ebb0652f216c9de'),
+        id: 6,
+        name: 'Suresh',
+        email: 'suresh@gmail.com',
+        role: 'student'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('661568e35ebb0652f216c9ff'),
+    id: 3,
+    date: ISODate('2024-10-20T00:00:00.000Z'),
+    company_name: 'Infosys',
+    student_placed: 'Chandru',
+    student_info: [
+      {
+        _id: ObjectId('6615605f5ebb0652f216c9df'),
+        id: 7,
+        name: 'Chandru',
+        email: 'chandru@gmail.com',
+        role: 'student'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('661568e35ebb0652f216ca00'),
+    id: 4,
+    date: ISODate('2024-10-25T00:00:00.000Z'),
+    company_name: 'Accenture',
+    student_placed: 'Vignesh',
+    student_info: [
+      {
+        _id: ObjectId('6615605f5ebb0652f216c9dc'),
+        id: 4,
+        name: 'Vignesh',
+        email: 'vignesh@gmail.com',
+        role: 'student'
+      }
+    ]
+  },
+  {
+    _id: ObjectId('661568e35ebb0652f216ca01'),
+    id: 5,
+    date: ISODate('2024-10-30T00:00:00.000Z'),
+    company_name: 'Cognizant',
+    student_placed: 'Dinesh',
+    student_info: [
+      {
+        _id: ObjectId('6615605f5ebb0652f216c9da'),
+        id: 2,
+        name: 'Dinesh',
+        email: 'dinesh@gmail.com',
+        role: 'student'
+      }
+    ]
+  }
+]
