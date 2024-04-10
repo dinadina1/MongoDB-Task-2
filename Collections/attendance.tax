@@ -1,0 +1,44 @@
+[
+  {
+    _id: ObjectId('661562a45ebb0652f216c9e7'),
+    user_id: 1,
+    date: ISODate('2024-10-02T00:00:00.000Z'),
+    status: 'Absent'
+  },
+  {
+    _id: ObjectId('661562a45ebb0652f216c9e8'),
+    user_id: 2,
+    date: ISODate('2024-10-15T00:00:00.000Z'),
+    status: 'Present'
+  },
+  {
+    _id: ObjectId('661562a45ebb0652f216c9e9'),
+    user_id: 3,
+    date: ISODate('2024-10-20T00:00:00.000Z'),
+    status: 'Absent'
+  },
+  {
+    _id: ObjectId('661562a45ebb0652f216c9ea'),
+    user_id: 4,
+    date: ISODate('2024-10-25T00:00:00.000Z'),
+    status: 'Absent'
+  },
+  {
+    _id: ObjectId('661562a45ebb0652f216c9eb'),
+    user_id: 5,
+    date: ISODate('2024-10-30T00:00:00.000Z'),
+    status: 'Absent'
+  },
+  {
+    _id: ObjectId('661562a45ebb0652f216c9ec'),
+    user_id: 6,
+    date: ISODate('2024-11-05T00:00:00.000Z'),
+    status: 'Absent'
+  },
+  {
+    _id: ObjectId('661562a45ebb0652f216c9ed'),
+    user_id: 7,
+    date: ISODate('2024-11-10T00:00:00.000Z'),
+    status: 'Present'
+  }
+]
