@@ -1,3 +1,6 @@
+Collection Name: users
+======================
+
 [
   {
     _id: ObjectId('6615605f5ebb0652f216c9d9'),
