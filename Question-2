@@ -1,0 +1,39 @@
+2. Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+
+Query:
+======
+db.company_drives.find({ date: { $gte: ISODate( '2024-10-15T00:00:00.000Z' ), 
+$lte: ISODate( '2024-10-31T00:00:00.000Z' ) } })
+
+Result:
+=======
+[
+  {
+    _id: ObjectId('661568e35ebb0652f216c9fe'),
+    id: 2,
+    date: ISODate('2024-10-15T00:00:00.000Z'),
+    company_name: 'Wipro',
+    student_placed: [ 'Suresh' ]
+  },
+  {
+    _id: ObjectId('661568e35ebb0652f216c9ff'),
+    id: 3,
+    date: ISODate('2024-10-20T00:00:00.000Z'),
+    company_name: 'Infosys',
+    student_placed: [ 'Chandru' ]
+  },
+  {
+    _id: ObjectId('661568e35ebb0652f216ca00'),
+    id: 4,
+    date: ISODate('2024-10-25T00:00:00.000Z'),
+    company_name: 'Accenture',
+    student_placed: [ 'Vignesh' ]
+  },
+  {
+    _id: ObjectId('661568e35ebb0652f216ca01'),
+    id: 5,
+    date: ISODate('2024-10-30T00:00:00.000Z'),
+    company_name: 'Cognizant',
+    student_placed: [ 'Dinesh' ]
+  }
+]
