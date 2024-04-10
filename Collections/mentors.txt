@@ -1,0 +1,37 @@
+[
+  {
+    _id: ObjectId('661619d8fa35648a9c16c9b5'),
+    id: 1,
+    name: 'Guna',
+    mentees: [ 'Dinakaran', 'Dinesh', 'Suresh', 'Chandru', 'Vignesh' ],
+    mentee_count: 10
+  },
+  {
+    _id: ObjectId('661619d8fa35648a9c16c9b6'),
+    id: 2,
+    name: 'Ramesh',
+    mentees: [ 'Rakesh', 'Suresh', 'Chandru', 'Vignesh', 'Dinesh' ],
+    mentee_count: 20
+  },
+  {
+    _id: ObjectId('661619d8fa35648a9c16c9b7'),
+    id: 3,
+    name: 'Suresh',
+    mentees: [ 'Rakesh', 'Dinakaran', 'Dinesh', 'Chandru', 'Vignesh' ],
+    mentee_count: 25
+  },
+  {
+    _id: ObjectId('661619d8fa35648a9c16c9b8'),
+    id: 4,
+    name: 'Rakesh',
+    mentees: [ 'Ramesh', 'Suresh', 'Dinakaran', 'Dinesh', 'Chandru' ],
+    mentee_count: 30
+  },
+  {
+    _id: ObjectId('661619d8fa35648a9c16c9b9'),
+    id: 5,
+    name: 'Dinesh',
+    mentees: [ 'Suresh', 'Ramesh', 'Rakesh', 'Dinakaran', 'Chandru' ],
+    mentee_count: 50
+  }
+]
