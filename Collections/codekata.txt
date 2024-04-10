@@ -1,0 +1,58 @@
+[
+  {
+    _id: ObjectId('6615613b5ebb0652f216c9e0'),
+    user_id: 1,
+    problem_id: 1,
+    date_solved: ISODate('2024-10-02T00:00:00.000Z'),
+    problem_count: 1
+  },
+  {
+    _id: ObjectId('6615613b5ebb0652f216c9e1'),
+    user_id: 2,
+    problem_id: 2,
+    date_solved: ISODate('2024-10-15T00:00:00.000Z'),
+    problem_count: 1
+  },
+  {
+    _id: ObjectId('6615613b5ebb0652f216c9e2'),
+    user_id: 3,
+    problem_id: 3,
+    date_solved: ISODate('2024-10-20T00:00:00.000Z'),
+    problem_count: 1
+  },
+  {
+    _id: ObjectId('6615613b5ebb0652f216c9e3'),
+    user_id: 4,
+    problem_id: 4,
+    date_solved: ISODate('2024-10-25T00:00:00.000Z'),
+    problem_count: 1
+  },
+  {
+    _id: ObjectId('6615613b5ebb0652f216c9e4'),
+    user_id: 5,
+    problem_id: 5,
+    date_solved: ISODate('2024-10-30T00:00:00.000Z'),
+    problem_count: 1
+  },
+  {
+    _id: ObjectId('6615613b5ebb0652f216c9e5'),
+    user_id: 6,
+    problem_id: 6,
+    date_solved: ISODate('2024-11-05T00:00:00.000Z'),
+    problem_count: 1
+  },
+  {
+    _id: ObjectId('6615613b5ebb0652f216c9e6'),
+    user_id: 7,
+    problem_id: 7,
+    date_solved: ISODate('2024-11-10T00:00:00.000Z'),
+    problem_count: 1
+  },
+  {
+    _id: ObjectId('6616137c419673916c16c9b5'),
+    user_id: 4,
+    problem_id: 5,
+    date_solved: ISODate('2024-10-25T00:00:00.000Z'),
+    problem_count: 1
+  }
+]
