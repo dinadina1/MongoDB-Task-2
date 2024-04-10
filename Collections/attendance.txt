@@ -1,7 +1,6 @@
 Collection Name: attendance
 ===========================
 
-
 [
   {
     _id: ObjectId('661562a45ebb0652f216c9e7'),
